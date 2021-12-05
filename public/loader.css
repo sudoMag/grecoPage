@@ -1,0 +1,8 @@
+#loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #31342B;
+    z-index: 4;
+    transition-duration: 1s;
+}
