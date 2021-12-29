@@ -1,30 +1,6 @@
-# **This is my portfolio created whit React.js** 🦾
+# Web Page for Greco App Download
 
-## I has created this portfolio for show my works and projects (⌐■_■), anyway to learn about react and styled Components💅.
-
-to finished the scketch page, I said me "***mmm.. It's so Boring...***", so what I created a music player whit some tracks what I liked 🎵
-
-
-## __Desktop Version__
-
-
-![capture screen](/screenshots/capture_4.png)
-
-
-![capture screen](/screenshots/capture_3.png)
-
-
-## __Mobile Version__
-
-
-![capture screen](/screenshots/capture_2.png)
-
-
-![capture screen](/screenshots/capture_1.png)
-
-I think what it can inprove more and to have my personality, but this is the first version. After I  
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
