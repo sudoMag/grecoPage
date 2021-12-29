@@ -3,7 +3,7 @@ import GrecoLogoSvg from "../media/greco logo.svg";
 import GitHubLogoSvg from "../media/github logo.svg";
 import { SvgImg, LinkedImg } from "./Image";
 import { addScrollFx } from "../services/getScrollPosition";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Bar = styled.nav`
   width: 100vw;

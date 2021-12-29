@@ -56,12 +56,12 @@ const App = () => {
   //const [ theme, setThemeColors ] = useState('light');
   const theme = "light";
   return (
-    <MainContainer id="App" onScroll={() => console.log('keso')}>
+    <MainContainer id="App">
       <GeneralStyles theme={theme} />
       <Navbar/>
       <Router>
         <Routes>
-          <Route index element={<Home />} />
+          <Route index path="/" element={<Home/>} />
           <Route path="/*" element={<NotFoundErrorPage />} />
         </Routes>
       </Router>
