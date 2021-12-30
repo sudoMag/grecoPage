@@ -6,7 +6,7 @@ import { addScrollFx } from "../services/getScrollPosition";
 import { useState } from "react";
 
 const Bar = styled.nav`
-  width: 100vw;
+  width: 100%;
   height: 60px;
   //background-color: gray;
   display: flex;
@@ -46,6 +46,7 @@ const Navbar = () => {
         src={GrecoLogoSvg}
         styleKeys={`
             margin: auto;
+            width: 30px;
           `}
       />
       <LinkedImg
@@ -56,6 +57,7 @@ const Navbar = () => {
             display: flex;
             justify-content: flex-end;
           `}
+        href="https://github.com/sudoMag/greco"
       />
     </Bar>
   );

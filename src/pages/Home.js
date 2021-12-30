@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SvgImg } from "../components/Image";
 import ScreenShotsSvg from "../media/screenshots.svg";
 import { DescriptionH1, DescriptionH2 } from "../components/TextTypes";
-import { DownloadButton } from "../components/Button";
+import { DownloadButton, TextInsidePill } from "../components/Button";
 
 const Header = styled.header`
   display: flex;
@@ -42,6 +42,7 @@ const Home = () => {
         </DescriptionH2>
         <DownloadBox>
           <DownloadButton>Descargar</DownloadButton>
+          <TextInsidePill>Beta</TextInsidePill>
         </DownloadBox>
       </LeftContent>
       <RightContent

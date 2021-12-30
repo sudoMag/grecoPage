@@ -12,11 +12,12 @@ const ExternalLink = styled.a`
   }}
 `;
 
-export const LinkedImg = ({ imgSrc, styleKeys }) => {
+export const LinkedImg = ({ imgSrc, href, styleKeys }) => {
   return (
     <ExternalLink
-      href="*"
+      href={href}
       styleKeys={`${styleKeys}`}
+      target="_blank"
 		>
       <SvgImg src={imgSrc} />
     </ExternalLink>
