@@ -23,7 +23,7 @@ const LeftContent = styled.div`
 `;
 
 const DownloadBox = styled.div`
-  margin: 2em 0 0.2em 0;
+  margin: 2em 0;
   display: flex;
   flex-direction: row;
 `;
