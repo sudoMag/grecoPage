@@ -8,6 +8,10 @@ const Header = styled.header`
   display: flex;
   width: 100vw;
   min-height: 100vh;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const LeftContent = styled.div`
@@ -19,7 +23,7 @@ const LeftContent = styled.div`
 `;
 
 const DownloadBox = styled.div`
-  margin: 2em 0;
+  margin: 2em 0 0.2em 0;
   display: flex;
   flex-direction: row;
 `;
@@ -27,6 +31,11 @@ const DownloadBox = styled.div`
 const RightContent = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const PlatformText = styled.h4`
+  margin: auto 0;
+  color: gray;
 `;
 
 const Home = () => {
@@ -43,7 +52,9 @@ const Home = () => {
         <DownloadBox>
           <DownloadButton>Descargar</DownloadButton>
           <TextInsidePill>Beta</TextInsidePill>
+          <PlatformText>Windows</PlatformText>
         </DownloadBox>
+        
       </LeftContent>
       <RightContent
         className="
