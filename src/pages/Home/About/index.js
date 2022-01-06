@@ -16,7 +16,7 @@ export const About = () => {
       </LeftContent>
       <RightContent className="mobile-change all-screen-width">
 				<H2Text>Si eres Igeniero, Arquitecto, Desarrollador de Software o tal vez estudiante,</H2Text>
-        <DescriptionP> y necesitas tener varias palabras técnicas o palabras coloquiales y sus significados solo tienes que buscarlo en Greco y listo</DescriptionP>
+        <DescriptionP> y necesitas tener varias palabras del ámbito profesional o palabras coloquiales y sus significados solo tienes que buscarlo en Greco y listo</DescriptionP>
       </RightContent>
     </Container>
   );
