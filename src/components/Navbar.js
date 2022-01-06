@@ -5,17 +5,22 @@ import { SvgImg, LinkedImg } from "./Image";
 import { addScrollFx } from "../services/getScrollPosition";
 import { useState } from "react";
 
-const Bar = styled.nav`
+const Bar = styled.nav.attrs(({ scrollPosition }) => {
+  const [, axisY] = scrollPosition;
+  //console.log((axisY > 40 ? 40 : axisY / 0.74) * 0.3);
+  return {
+    style: {
+      backdropFilter: `blur(${(axisY > 40 ? 40 : axisY / 0.74) * 0.3}px)`,
+    },
+  };
+})`
   width: 100%;
   height: 60px;
   //background-color: gray;
   display: flex;
   position: fixed;
-  backdrop-filter: blur(px);
-  ${({ scrollPosition }) => {
-    //console.log((scrollPosition[1] / 0.74) * 0.3 ,"px");
-    return `backdrop-filter: blur(${(scrollPosition[1] / 0.74) * 0.3}px);`;
-  }};
+  z-index: 2;
+  backdrop-filter: blur(0px);
 `;
 
 const PageTitle = styled.span`
@@ -26,6 +31,20 @@ const PageTitle = styled.span`
   color: black;
   font-size: 1.2em;
   font-weight: 600;
+`;
+
+const GithubLink = styled(LinkedImg)`
+  & {
+    margin: auto 2vw auto auto;
+    width: 10vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+`;
+
+const Logo = styled(SvgImg)`
+  margin: auto;
+  width: 30px;
 `;
 
 const Navbar = () => {
@@ -42,21 +61,9 @@ const Navbar = () => {
   return (
     <Bar scrollPosition={scrollPosition}>
       <PageTitle>GRECO</PageTitle>
-      <SvgImg
-        src={GrecoLogoSvg}
-        styleKeys={`
-            margin: auto;
-            width: 30px;
-          `}
-      />
-      <LinkedImg
+      <Logo src={GrecoLogoSvg} />
+      <GithubLink
         imgSrc={GitHubLogoSvg}
-        styleKeys={`
-            margin: auto 2vw auto auto;
-            width: 10vw;
-            display: flex;
-            justify-content: flex-end;
-          `}
         href="https://github.com/sudoMag/greco"
       />
     </Bar>

@@ -9,7 +9,12 @@ const StyledButton = styled.div`
   font-size: 1.1em;
   cursor: pointer;
   color: white;
-  ${({ moreStyles }) => moreStyles};
+  text-decoration: none;
+  transition-duration: 200ms;
+
+  &:hover {
+    background-color: ${({ HoverColor }) => HoverColor};
+  }
 `;
 
 export const PillText = styled.div`
@@ -23,7 +28,6 @@ export const PillText = styled.div`
   color: #ebd1d1;
   background-color: #831b1b;
   border: #ed9b9b solid 2px;
-  ${({ moreStyles }) => moreStyles};
 `;
 
 export default StyledButton;

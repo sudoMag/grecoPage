@@ -1,7 +1,7 @@
 //import { useEffect, useState } from 'react';
 import styled, { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import { Home } from "./pages/Home";
 import NotFoundErrorPage from "./pages/404";
 import Navbar from "./components/Navbar";
 
@@ -10,7 +10,7 @@ const GeneralStyles = createGlobalStyle`
     if (props.theme === "light") {
       return `
         html {
-          --font-color: #585858;
+          --font-color: #2e2e2e;
           --font-color-2: gray;
           --font-color-ngtv: #b3b3b3;
           --bg-color-1: white;
@@ -58,10 +58,10 @@ const App = () => {
   return (
     <MainContainer id="App">
       <GeneralStyles theme={theme} />
-      <Navbar/>
+      <Navbar />
       <Router>
         <Routes>
-          <Route index path="/" element={<Home/>} />
+          <Route index path="/" element={<Home />} />
           <Route path="/*" element={<NotFoundErrorPage />} />
         </Routes>
       </Router>

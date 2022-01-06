@@ -1,25 +1,29 @@
 import StyledButton, { PillText } from "./styles";
 
-const Button = ({ children, color, moreStyles }) => {
+const Button = ({ children, color, ...args }) => {
   return (
-    <StyledButton color={color} moreStyles={moreStyles}>
+    <StyledButton color={color} {...args}>
       {children}
     </StyledButton>
   );
 };
 
-export const DownloadButton = ({ color, moreStyles }) => {
+export const DownloadButton = ({ color, HoverColor = "none", ...args }) => {
   return (
-    <a href="./Greco.exe" download="Greco-Beta-0.0.1.exe">
-      <Button color={color} moreStyles={moreStyles}>
+    <a
+      href="./Greco.exe"
+      download="Greco-Beta-0.0.1.exe"
+      style={{textDecoration: 'none'}}
+    >
+      <Button color={color} HoverColor={HoverColor} {...args}>
         Descargar
       </Button>
     </a>
   );
 };
 
-export const TextInsidePill = ({ children }) => {
-  return <PillText>{children}</PillText>;
+export const TextInsidePill = ({ children, ...args }) => {
+  return <PillText {...args}>{children}</PillText>;
 };
 
 export default Button;

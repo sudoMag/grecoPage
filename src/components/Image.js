@@ -1,24 +1,12 @@
 import styled from "styled-components";
 
-export const SvgImg = styled.img`
-  ${({ styleKeys }) => {
-    return `${styleKeys}`;
-  }}
-`;
+export const SvgImg = styled.img``;
 
-const ExternalLink = styled.a`
-  ${({ styleKeys }) => {
-    return `${styleKeys}`;
-  }}
-`;
+const ExternalLink = styled.a``;
 
-export const LinkedImg = ({ imgSrc, href, styleKeys }) => {
+export const LinkedImg = ({ imgSrc, href, ...args }) => {
   return (
-    <ExternalLink
-      href={href}
-      styleKeys={`${styleKeys}`}
-      target="_blank"
-		>
+    <ExternalLink href={href} target="_blank" {...args}>
       <SvgImg src={imgSrc} />
     </ExternalLink>
   );
